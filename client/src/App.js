@@ -1,17 +1,30 @@
 import './App.css'
-import axios from 'axios'
+import Nav from './components/Nav'
+import About from './components/About'
+import Reviews from './components/Reviews'
+import AddReview from './components/AddReview'
+import EditReview from './components/EditReview'
+import { Routes, Route } from 'react-router-dom'
+import ThemeParkList from './components/ThemeParkList'
 import CreateReview from './components/createReview'
-import Home from './pages/Home'
-import Header from './components/Header'
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <h1>Hello World</h1>
-      <Home />
-      <Header />
+    <div>
+      <Nav />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/themeparks" element={<ThemeParkList />} />
+          <Route path="/add-review" element={<AddReview />} />
+          <Route path="/themeparks/:id/reviews" element={<Reviews />} />
+          <Route path="/themeparks/:id/reviews/:id" />
+          <Route path="/review/:id/edit" element={<EditReview />} />
+        </Routes>
+      </main>
     </div>
   )
 }
-
 export default App

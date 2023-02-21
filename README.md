@@ -2,10 +2,6 @@
 a MERN stack theme park review site
 
 
-
-
-
-
-
-
 Hello darkness, my old friend
+
+APPROVED

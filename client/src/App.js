@@ -1,4 +1,3 @@
-import logo from './logo.svg'
 import './App.css'
 import Nav from './components/Nav'
 import About from './components/About'
@@ -7,6 +6,8 @@ import AddReview from './components/AddReview'
 import EditReview from './components/EditReview'
 import { Routes, Route } from 'react-router-dom'
 import ThemeParkList from './components/ThemeParkList'
+import CreateReview from './components/createReview'
+
 
 const App = () => {
   return (

@@ -4,7 +4,6 @@ import Home from './pages/Home'
 import Details from './pages/Details'
 import AddReview from './pages/AddReview'
 import Header from './components/Header'
-// import CreateReview from './components/CreateReview'
 import About from './pages/About'
 import ReviewsList from './pages/ReviewsList'
 

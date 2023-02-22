@@ -16,10 +16,24 @@ const ReviewsList = () => {
         setAllReview(response.data)
         // console.log(response.data)
     }
-    const handleChangeDelete = async () => {
-        await axios.delete(`http://localhost:3001/api/themepark/${id}/reviews`)
-        setDeleteReview()
+
+   
+    const handleChangeDelete = async (reviewId) => {
+
+
+        await  axios.delete(`http://localhost:3001/api/themepark/${reviewId}?`)
+
+        // await  axios.delete(`http://localhost:3001/api/themepark/${reviewId}review/${reviewId}?`)
+
+        // router.delete('/themepark/:id/review/:id', controllers.deleteReview)
+
+
+        console.log(reviewId)
+        getReview()
     }
+
+
+
 
     useEffect(() => {
         getReview()
@@ -31,7 +45,7 @@ const ReviewsList = () => {
             <div className="showReview">
                 <h2>{review.name}</h2>
                 <p>{review.comment}</p>
-                <button onClick={handleChangeDelete(deleteReview._id)}>Delete</button>
+                <button onClick={() =>handleChangeDelete(review._id)}>Delete Comment</button> 
             </div>
         )
     })

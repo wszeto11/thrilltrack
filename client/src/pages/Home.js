@@ -11,23 +11,21 @@ const Home = () => {
     const getThemeParks = async () => {
       const response = await axios.get(`${BASE_URL}/themeparks`)
       setThemeParks(response.data.themeParks)
-      console.log(response)
     }
     getThemeParks()
   }, [])
   // console.log(themeParks)
   return (
-    <div>
-      <h1>Theme Parks</h1>
+    <div className='home'>
+      <h1 className='themeTitle'>Theme Parks</h1>
       <div className="themeParks">
         {themeParks.map((themePark) => (
           <div key={themePark.name}>
             <Link to={`/themepark/${themePark._id}`} state={{ themePark }}>
-              <p>
-                Name : {themePark.name}<br>
-                </br>
-                <img src={themePark.image} alt='theme park image' />
-              </p>
+              <h3 className='parkName'>
+                Theme Park Name: {themePark.name}
+              </h3>
+              <img src={themePark.image} alt='theme park image' />
             </Link>
           </div>
         ))}

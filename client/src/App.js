@@ -1,4 +1,5 @@
 import './App.css'
+
 // import Nav from './components/Nav'
 import About from './pages/About'
 // import Reviews from './components/Reviews'
@@ -8,6 +9,8 @@ import { Routes, Route } from 'react-router-dom'
 // import ThemeParkList from './components/ThemeParkList'
 import CreateReview from './components/createReview'
 
+import { Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
 
 const App = () => {
   return (
@@ -24,6 +27,15 @@ const App = () => {
           {/* <Route path="/review/:id/edit" element={<EditReview />} /> */}
         </Routes>
       </main>
+
+      <div>
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </main>
+      </div>
+
     </div>
   )
 }

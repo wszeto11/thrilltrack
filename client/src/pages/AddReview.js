@@ -1,10 +1,9 @@
-import CreateReview from '../components/createReview'
-import createReview from '../components/createReview'
+import CreateReview from '../components/CreateReview'
 
 const addReview = () => {
   return (
     <div>
-      <createReview />
+      <CreateReview />
     </div>
   )
 }

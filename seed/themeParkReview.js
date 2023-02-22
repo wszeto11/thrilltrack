@@ -24,7 +24,7 @@ const main = async () => {
         name: 'Legoland',
         location: 'Billund, Denmark',
         description: "A park built entirely out of Lego bricks, with attractions and activities for kids and adults.",
-        image: 'https://i.imgur.com/vJSUu5w.jpg',
+        image: 'https://i.imgur.com/CJ7PJpj.jpg',
         rating: '4.5/5'
     })
     themePark3.save()

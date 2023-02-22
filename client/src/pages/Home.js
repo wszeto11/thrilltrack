@@ -8,7 +8,6 @@ const BASE_URL = `http://localhost:3000`
 
 const Home = () => {
   const [themeparks, setThemeParks] = useState([])
-
   useEffect(() => {
     const getThemeParks = async () => {
       const response = await axios.get(`${BASE_URL}/themeparks`)

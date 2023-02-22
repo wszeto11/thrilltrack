@@ -8,7 +8,7 @@ const main = async () => {
         name: 'Disneyland',
         location: 'Anaheim, California, USA',
         description: "The original Disney theme park, known for its classic attractions like It's a Small World and Pirates of the Caribbean. Great for family!",
-        image: 'https://i.imgur.com/vJSUu5w.jpg',
+        image: 'https://i.imgur.com/wGYf0qb.png',
         rating: '4.5/5'
     })
     themePark1.save()
@@ -16,7 +16,7 @@ const main = async () => {
         name: 'Universal Studios',
         location: 'Orlando, Florida, USA',
         description: "A movie-themed park with attractions based on popular franchises like Harry Potter, Jurassic Park, and The Simpsons.",
-        image: ' https://i.imgur.com/eXLJdDk.jpg',
+        image: ' https://i.imgur.com/39JduCb.jpg',
         rating: '4.6/5'
     })
     themePark2.save()
@@ -24,7 +24,7 @@ const main = async () => {
         name: 'Legoland',
         location: 'Billund, Denmark',
         description: "A park built entirely out of Lego bricks, with attractions and activities for kids and adults.",
-        image: 'https://i.imgur.com/vJSUu5w.jpg',
+        image: 'https://i.imgur.com/CJ7PJpj.jpg',
         rating: '4.5/5'
     })
     themePark3.save()
@@ -32,7 +32,7 @@ const main = async () => {
         name: 'Europa-Park',
         location: 'Rust, Germany',
         description: "A large theme park with rides and attractions themed around different countries in Europe, such as Italy, Greece, and Scandinavia.",
-        image: 'https://i.imgur.com/fbsbgEa.jpg',
+        image: 'https://i.imgur.com/u7Ilo0u.jpg',
         rating: '4.2/5'
     })
     themePark4.save()
@@ -40,7 +40,7 @@ const main = async () => {
         name: 'Tokyo Disney Resort',
         location: 'Urayasu, Japan',
         description: "A Disney theme park located in Japan, with unique attractions like Pooh's Hunny Hunt and Journey to the Center of the Earth.",
-        image: 'https://i.imgur.com/4nzVcpG.jpg',
+        image: 'https://i.imgur.com/lKcW2sn.jpg',
         rating: '4.3/5'
     })
     themePark5.save()
@@ -48,7 +48,7 @@ const main = async () => {
         name: 'SeaWorld',
         location: 'Orlando, Florida, USA',
         description: "A marine-themed park with shows featuring dolphins, whales, and other aquatic animals, as well as rides and exhibits.",
-        image: 'https://i.imgur.com/fonZvYh.jpg',
+        image: 'https://i.imgur.com/SpUtQoP.jpg',
         rating: '4.1/5'
     })
     themePark6.save()

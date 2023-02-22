@@ -5,30 +5,29 @@ import axios from 'axios'
 const BASE_URL = `http://localhost:3001/api`
 
 const Home = () => {
-  const [themeparks, setThemeParks] = useState([])
+  const [themeParks, setThemeParks] = useState([])
 
   useEffect(() => {
     const getThemeParks = async () => {
       const response = await axios.get(`${BASE_URL}/themeparks`)
-      setThemeParks(response.data.themeparks)
-      console.log(response)
+      setThemeParks(response.data.themeParks)
     }
     getThemeParks()
   }, [])
-
+  // console.log(themeParks)
   return (
-    <div>
-      <h1>Theme Parks</h1>
-      <div className="themeparks">
-        {themeparks.map((themepark) => (
-          <div key='themepark.name'>
-            <Link to={`/themepark/${themepark._id}`} state={{ themepark }}>
-              <p>
-                Name : {themepark.name}<br>
-                </br>{themepark.image}
-              </p>
+    <div className='home'>
+      <h1 className='themeTitle'>Theme Parks</h1>
+      <div className="themeParks">
+        {themeParks.map((themePark) => (
+          <div key={themePark.name}>
+            <Link to={`/themepark/${themePark._id}`} state={{ themePark }}>
+              <h3 className='parkName'>
+                Theme Park Name: {themePark.name}
+              </h3>
+              <img src={themePark.image} alt='theme park image' />
             </Link>
-          // </div>
+          </div>
         ))}
       </div>
     </div>

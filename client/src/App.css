@@ -6,6 +6,21 @@ form {
 
   width: 100vw;
   height: 30vh;
+  margin-top: 10vh;
+}
+
+header {
+  background-color: #141265;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 3em;
+  
+}
+
+header nav a{
+  margin: 0 1em;
+  color: beige;
 }
 
 

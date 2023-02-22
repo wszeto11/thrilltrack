@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import axios from 'axios'
+import { useNavigate, useParams } from 'react-router-dom'
 
-const CreateReview = (props) => {
+const CreateReview = () => {
+  let navigate=useNavigate()
+  const { themeParkId } = useParams()
+
   const initialState = {
     name: '',
-    location:'',
-    description: '',
-    image: '',
-    rating: ''
+    comment:''
   }
   const [createReview, setCreateReview] = useState(initialState)
 
@@ -17,8 +18,8 @@ const CreateReview = (props) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    await axios.createReview('http://localhost:3001/api/createReviews', createReview)
-    setCreateReview(initialState)
+    // await axios.post(`http://localhost:3001/api/themepark/${themepark._id}/review`, createReview)
+   navigate(`/themeparks/:id`)
 
   }
 
@@ -28,51 +29,22 @@ const CreateReview = (props) => {
 <h2>Add A Review!</h2>
   <label htmlFor="name"> name:</label>
   <input
-    placeholder='name goes here'
+    placeholder='Enter full name'
     type="text"
     id="name"
     onChange={handleChange}
     value={createReview.name}
   />
-   <label htmlFor="location">Location</label>
-  <textarea
-  placeholder='Location goes here'
-   type="text"
-    id="location"
-    cols="20"
-    rows="20"
-    onChange={handleChange}
-    value={createReview.location}
-  ></textarea>
-  <label htmlFor="description">Description</label>
-  <textarea
-  placeholder='Description goes here'
-   type="text"
-    id="description"
-    cols="20"
-    rows="20"
-    onChange={handleChange}
-    value={createReview.description}
-  ></textarea>
-   <label htmlFor="image">Description Picture</label>
-  <textarea
-  placeholder='Picture goes here'
-   type="text"
-    id="image"
-    cols="20"
-    rows="20"
-    onChange={handleChange}
-    value={createReview.image}
-  ></textarea>
-
-<label htmlFor="rating"> Rating:</label>
+   <label htmlFor="comment">Comment</label>
   <input
-    placeholder='rating goes here'
-    type="text"
-    id="rating"
+  placeholder='Leave review here'
+   type="text"
+    id="comment"
     onChange={handleChange}
-    value={createReview.rating}
-  />
+    value={createReview.comment}
+  ></input>
+ 
+
 
 
   <button type="submit">Send</button>

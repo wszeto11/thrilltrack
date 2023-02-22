@@ -3,12 +3,12 @@ import axios from 'axios'
 import { useNavigate, useParams } from 'react-router-dom'
 
 const CreateReview = () => {
-  let navigate=useNavigate()
-  const { themeParkId } = useParams()
+  let navigate = useNavigate()
+  const { id } = useParams()
 
   const initialState = {
     name: '',
-    comment:''
+    comment: ''
   }
   const [createReview, setCreateReview] = useState(initialState)
 
@@ -18,37 +18,32 @@ const CreateReview = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    // await axios.post(`http://localhost:3001/api/themepark/${themepark._id}/review`, createReview)
-   navigate(`/themeparks/:id`)
-
+    await axios.post(`http://localhost:3001/api/themepark/${id}/review`, createReview)
+    navigate(`/themepark/${id}/reviews`)
   }
 
 
   return (
     <form onSubmit={handleSubmit}>
-<h2>Add A Review!</h2>
-  <label htmlFor="name"> name:</label>
-  <input
-    placeholder='Enter full name'
-    type="text"
-    id="name"
-    onChange={handleChange}
-    value={createReview.name}
-  />
-   <label htmlFor="comment">Comment</label>
-  <input
-  placeholder='Leave review here'
-   type="text"
-    id="comment"
-    onChange={handleChange}
-    value={createReview.comment}
-  ></input>
- 
-
-
-
-  <button type="submit">Send</button>
-</form>
+      <h2>Add A Review!</h2>
+      <label htmlFor="name"> name:</label>
+      <input
+        placeholder='Enter full name'
+        type="text"
+        id="name"
+        onChange={handleChange}
+        value={createReview.name}
+      />
+      <label htmlFor="comment">Comment</label>
+      <input
+        placeholder='Leave review here'
+        type="text"
+        id="comment"
+        onChange={handleChange}
+        value={createReview.comment}
+      ></input>
+      <button type="submit">Send</button>
+    </form>
   )
 }
 

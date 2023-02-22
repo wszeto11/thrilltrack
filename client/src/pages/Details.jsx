@@ -1,41 +1,25 @@
-// import { useLocation, useNavigate } from 'react-router-dom'
-// import axios from 'axios'
-// import { useState, useEffect } from 'react-router-dom'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
+const Details = () => {
+    const locate = useLocation()
+    const { park } = locate.state
 
-const BASE_URL = `http://localhost:3001`
-
-const Details = ({themePark}) => {
-
-    // const [details, setDetails] = useState([])
-    // let { id } = useParams()
-
-    // const getDetails = async () => {
-    //     const response = await axios.get(`${BASE_URL}/themepark/:id`)
-    //     setDetails(response.data.details)
-    // }
-
-    // useEffect(() => {
-    //     getDetails()
-    // }, [])
+    // console.log(park)
 
     return (
         <div>
             <h1 className='details'>Details</h1>
-            {/* {details.map((detail) => (
-                <div key={detail._id} className='details'> */}
-                    <p>{themePark.name}</p>
-                    <p>Location: {themePark.location}</p>
-                    <p>Description: {themePark.description}</p>
-                    <p>Rating: {themePark.rating}</p>
-                    <Link to = {`/themeparks/${themePark._id}/reviews`} state={{themePark}}>
-                    <h1>
-                        Click here for reviews!
-                    </h1>
-                    </Link>
-                {/* </div>
-            ))} */}
+            <h1>{park.name}</h1>
+            <img src={park.image} alt='theme park image' />
+            <p>Location: {park.location}</p>
+            <p>Description: {park.description}</p>
+            <p>Rating: {park.rating}</p>
+            <Link to={`/themepark/${park._id}/reviews`} state={{ park }}>
+                <h1>
+                    Click here for reviews!
+                </h1>
+            </Link>
+
         </div>
     )
 }

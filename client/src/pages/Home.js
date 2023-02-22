@@ -16,14 +16,14 @@ const Home = () => {
     getThemeParks()
   }, [])
   // console.log(themeParks)
-  
+
   return (
     <div className='home'>
       <h1 className='themeTitle'>Theme Parks</h1>
       <div className="themeParks">
         {themeParks.map((themePark) => (
           <div key={themePark.name}>
-            <Link to={`/themepark/${themePark._id}`} state={{ themePark }}>
+            <Link to={`/themepark/${themePark._id}`} state={{ park: themePark }}>
               <h3 className='parkName'>
                 Theme Park Name: {themePark.name}
               </h3>

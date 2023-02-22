@@ -17,10 +17,12 @@ const App = () => {
           <Route path="/themepark/:id" element={<Details />} />
           <Route path="/about/" element={<About />} />
           <Route path="/themeparks/:id/reviews" element={<ReviewsList />} />
-          <Route path="/themeparks/:id/reviews/addreview" element={<AddReview />} />
+          <Route
+            path="/themeparks/:id/reviews/addreview"
+            element={<AddReview />}
+          />
         </Routes>
       </main>
-
     </div>
   )
 }

@@ -2,14 +2,12 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
-const BASE_URL = `http://localhost:3001/api`
-
 const Home = () => {
   const [themeParks, setThemeParks] = useState([])
 
   useEffect(() => {
     const getThemeParks = async () => {
-      const response = await axios.get(`${BASE_URL}/themeparks`)
+      const response = await axios.get(`/api/themeparks`)
       setThemeParks(response.data.themeParks)
     }
     getThemeParks()
@@ -18,7 +16,6 @@ const Home = () => {
 
   return (
     <div className="home">
-
       <h1 className="themeTitle">Theme Parks From All Around The World</h1>
       <div className="themeParks">
         {themeParks.map((themePark) => (

@@ -18,7 +18,7 @@ const CreateReview = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    await axios.post(`http://localhost:3001/api/themepark/${id}/review`, createReview)
+    await axios.post(`/api/themepark/${id}/review`, createReview)
     navigate(`/themepark/${id}/reviews`)
   }
 

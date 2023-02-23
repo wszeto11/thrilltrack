@@ -9,13 +9,13 @@ const ReviewsList = () => {
 
     const getReview = async () => {
         const response = await axios.get(
-            `http://localhost:3001/api/themepark/${id}/reviews`
+            `/api/themepark/${id}/reviews`
         )
         setAllReview(response.data)
         console.log(response)
     }
     const handleDelete = async (reviewId) => {
-        await axios.delete(`http://localhost:3001/api/themepark/${id}/review/${reviewId}`)
+        await axios.delete(`/api/themepark/${id}/review/${reviewId}`)
         getReview()
     }
 

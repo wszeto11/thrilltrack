@@ -31,7 +31,7 @@ const ReviewsList = () => {
             <div className="showReview">
                 <h2>{review.name}</h2>
                 <p>{review.comment}</p>
-                <button onClick={handleChangeDelete(deleteReview._id)}>Delete</button>
+                {/* <button onClick={handleChangeDelete(deleteReview._id)}>Delete</button> */}
             </div>
         )
     })

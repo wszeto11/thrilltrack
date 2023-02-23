@@ -1,14 +1,3 @@
-/* form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-
-  width: 100vw;
-  height: 30vh;
-  margin-top: 10vh;
-} */
-
 body {
   background: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F607%2F620%2Foriginal%2Flarge-amusement-park-scene-vector.jpg&f=1&nofb=1&ipt=2665aeef6a75debb925cc38d689703e1c38f97eb83ca23316edb2f8046bd489d&ipo=images');
   background-size: cover;
@@ -23,7 +12,6 @@ body {
   align-content: center;
 }
 
-
 .themeParks {
   display: flex;
   flex-direction: row;
@@ -32,14 +20,12 @@ body {
   align-content: center;
   width: 70vw;
   height: 60vh;
-  margin: 40vh 2vw;
-  
+  margin: 40vh 2vw;  
 }
 
 .parks {
   margin: 2vh 2vw;
   background-color: rgba(108, 205, 244, 0.9);
-  /* opacity: 0.9; */
   border: 2px solid rgb(241, 175, 175);
   border-radius: 20px;
   transition: .20s;
@@ -53,7 +39,6 @@ body {
   display: flex;
   justify-content: center;
   align-content: center;
-  
 }
 
 .parkLinks {
@@ -74,7 +59,6 @@ body {
 header {
   background-color: #141265;
   height: 7vh;
-
 }
 
 .logoTitle {
@@ -134,36 +118,135 @@ header {
   transform: translateY(10px);
 }
 
-
-/* .App {
+.showReview {
+  background-color: rgb(108, 205, 244);
   text-align: center;
-} */
-
-
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 40vh;
+  width: 30vh;
+  border-radius: 20px;
+  border: 3px dotted rgb(241, 175, 175);
+  padding: 20px;
   color: white;
-} */
-
-/* .App-link {
-  color: #61dafb;
+  margin: 3vh 3vw;
+  overflow-y: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+.showReviewList {
+  display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+}
 
-  to {
-    transform: rotate(360deg);
-  }
-} */
+.showReviewButton {
+  text-align: center;
+  margin-bottom: 20vh 20vw; 
+}
+
+.addReview-btn {
+  display: inline-block;
+  background-color: rgb(81, 165, 176);
+  padding: 20px;
+  width: 200px;
+  color: #ffffff;
+  text-align: center;
+  border: 4px double #cccccc;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer; 
+  margin: 5px; 
+}
+
+.deleteComment-btn {
+  display: inline-block;
+  text-align: center;
+  background-color: #fa6b04;
+  padding: 10px;
+  width: 100px;
+  color: #ffffff;
+  text-align: center;
+  border: 4px double #cccccc;
+  border-radius: 10px;
+  font-size: 12px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button:hover {
+  filter: brightness(150%);
+  transition: 0.6s;
+  transform: scale(1.06);
+}
+
+form {
+  background-color: rgb(108, 205, 244);
+  text-align: center;
+  height: 30vh;
+  width: 30vh;
+  border-radius: 20px;
+  border: 3px dotted rgb(241, 175, 175);
+  padding: 10vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 30vh;
+  margin-top: 10vh;
+} 
+
+.formSubmit-btn {
+ display: inline-block;
+  text-align: center;
+  background-color: #fa6b04;
+  padding: 2vh;
+  width: 20vh;
+  color: #ffffff;
+  text-align: center;
+  border: 1vh double #cccccc;
+  border-radius: 10px;
+  font-size: 12px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.form {
+  transform: scale(1.06);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: space-between;
+  width: 70vw;
+  height: 50vh;
+  margin: 13vh;
+  opacity: 0.9;
+  border-radius: 20px;
+  transition: .20s; 
+}
+
+.form:hover {
+  transform: scale(1.06);
+}
+
+.form:hover~.form:hover {
+  transform: scale(1.06);
+}
+
+.reviewContainer:hover {
+  transform: scale(1.06);
+} 
+
+.reviewContainer:hover~.reviewContainer {
+  transform: translateY(30px);
+} 
+
+.formBox{
+display: flex;
+justify-content: center;
+}
 
 .details-container {
   text-align: center;

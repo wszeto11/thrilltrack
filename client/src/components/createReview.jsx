@@ -24,6 +24,8 @@ const CreateReview = () => {
 
 
   return (
+    <div className="reviewContainer">
+    <div className="formBox">
     <form onSubmit={handleSubmit}>
       <h2>Add A Review!</h2>
       <label htmlFor="name"> name:</label>
@@ -42,8 +44,10 @@ const CreateReview = () => {
         onChange={handleChange}
         value={createReview.comment}
       ></input>
-      <button type="submit">Send</button>
+      <button className="formSubmit-btn" type="submit">Send</button>
     </form>
+    </div>
+    </div>
   )
 }
 

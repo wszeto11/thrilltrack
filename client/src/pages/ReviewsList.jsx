@@ -35,10 +35,14 @@ const ReviewsList = () => {
     })
     return (
         <div className="showReviewButton">
+            <div className="addReviewBtn">
             <Link to={`/themepark/${id}/reviews/addreview`}>
                 <button>Add Review</button>
             </Link>
+            </div>
+            <div className="reviewDisplay">
             {showReview}
+            </div>
         </div>
     )
 

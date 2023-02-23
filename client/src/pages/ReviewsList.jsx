@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
-import { useParams, useNavigate, Link, useLocation } from "react-router-dom"
+import { useParams, useNavigate, Link } from "react-router-dom"
 
 const ReviewsList = () => {
 
-    let navigate = useNavigate()
     const { id } = useParams()
     const [allReview, setAllReview] = useState([])
-    const [deleteReview, setDeleteReview] = useState()
 
     const getReview = async () => {
         const response = await axios.get(
@@ -16,9 +14,9 @@ const ReviewsList = () => {
         setAllReview(response.data)
         // console.log(response.data)
     }
-    const handleChangeDelete = async () => {
-        await axios.delete(`http://localhost:3001/api/themepark/${id}/reviews`)
-        setDeleteReview()
+    const handleDelete = async (reviewId) => {
+        await axios.delete(`http://localhost:3001/api/themepark/${id}/reviews/${reviewId}`)
+        getReview()
     }
 
     useEffect(() => {
@@ -31,7 +29,7 @@ const ReviewsList = () => {
             <div className="showReview">
                 <h2>{review.name}</h2>
                 <p>{review.comment}</p>
-                <button onClick={handleChangeDelete(deleteReview._id)}>Delete</button>
+                <button onClick={handleDelete(review._id)}>Delete</button>
             </div>
         )
     })

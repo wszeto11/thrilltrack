@@ -7,14 +7,13 @@ const ReviewsList = () => {
     let navigate = useNavigate()
     const { id } = useParams()
     const [allReview, setAllReview] = useState([])
-    const [deleteReview, setDeleteReview] = useState()
 
     const getReview = async () => {
         const response = await axios.get(
             `http://localhost:3001/api/themepark/${id}/reviews`
         )
         setAllReview(response.data)
-        // console.log(response.data)
+        console.log(response.data)
     }
 
    
@@ -42,20 +41,26 @@ const ReviewsList = () => {
     const showReview = allReview?.map((review) => {
 
         return (
+            <div className="reviewContainer">
             <div className="showReview">
                 <h2>{review.name}</h2>
                 <p>{review.comment}</p>
-                <button onClick={() =>handleChangeDelete(review._id)}>Delete Comment</button> 
+                <button className="deleteComment-btn" onClick={() =>handleChangeDelete(review._id)}>Delete Comment</button> 
+            </div>
             </div>
         )
     })
     return (
+        <div>
         <div className="showReviewButton">
             <Link to={`/themepark/${id}/reviews/addreview`}>
-                <button>Add Review</button>
+                <button className="addReview-btn">Add Review</button>
             </Link>
-            {showReview}
         </div>
+        <div className="showReviewList">
+            {showReview}
+         </div>
+         </div>
     )
 
 }

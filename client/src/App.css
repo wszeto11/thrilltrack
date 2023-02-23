@@ -16,13 +16,13 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-
-body {
-  background: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F607%2F620%2Foriginal%2Flarge-amusement-park-scene-vector.jpg&f=1&nofb=1&ipt=2665aeef6a75debb925cc38d689703e1c38f97eb83ca23316edb2f8046bd489d&ipo=images');
-  background-size: cover;
-  background-repeat: no-repeat;
-  font-family: 'Poppins', sans-serif;
+.home {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
+
 
 .themeParks {
   display: flex;
@@ -33,6 +33,7 @@ body {
   width: 70vw;
   height: 60vh;
   margin: 40vh 2vw;
+  
 }
 
 .parks {
@@ -49,6 +50,10 @@ body {
 
 .themeTitle {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  
 }
 
 .parkLinks {
@@ -60,8 +65,6 @@ body {
 }
 
 .park-img {
-  /* display: flex;
-  flex-wrap: wrap;  */
   width: 20vw;
   height: 25vh;
   border-radius: 12px;

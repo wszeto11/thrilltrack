@@ -143,35 +143,45 @@ header {
 
 .showReviewButton {
   display: flex;
-  flex-direction: wrap;
-  text-align: center;
-  margin-bottom: 20vh 20vw;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }
 
 
-/* .addReviewBtn {
+.addReviewBtn {
   text-align: center;
-  align-items: center;
-  background-color: red;
-} */
+}
 
 .reviewDisplay {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
+
 }
 
 .addReview-btn {
   display: inline-block;
   background-color: rgb(81, 165, 176);
   padding: 20px;
-  width: 200px;
+  width: 150px;
   color: #ffffff;
   text-align: center;
   border: 4px double #cccccc;
   border-radius: 10px;
-  font-size: 20px;
+  font-size: 15px;
   cursor: pointer;
   margin: 5px;
+  font-weight: 700;
+}
+
+.formBox label {
+  font-size: 20px;
+}
+
+.formBox input {
+  font-size: 17px;
 }
 
 .deleteComment-btn {
@@ -213,8 +223,6 @@ button:hover {
 form {
   background-color: rgb(108, 205, 244);
   text-align: center;
-  /* height: 30vh; */
-  /* width: 30vh; */
   border-radius: 20px;
   border: 3px dotted rgb(241, 175, 175);
   padding: 10vh;
@@ -223,10 +231,8 @@ form {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-   /* width: 100vw;  */
   height: 30vh;
   margin-top: 10vh;
-} 
   transition: .20s;
 }
 
@@ -368,4 +374,3 @@ form {
   border: 1px solid rgb(241, 175, 175);
   border-radius: 5px;
 }
-

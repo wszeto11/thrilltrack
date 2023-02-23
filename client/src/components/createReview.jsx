@@ -25,28 +25,30 @@ const CreateReview = () => {
 
   return (
     <div className="reviewContainer">
-    <div className="formBox">
-    <form onSubmit={handleSubmit}>
-      <h2>Add A Review!</h2>
-      <label htmlFor="name"> Name:</label>
-      <input
-        placeholder='Enter full name'
-        type="text"
-        id="name"
-        onChange={handleChange}
-        value={createReview.name}
-      />
-      <label htmlFor="comment">Comment</label>
-      <input
-        placeholder='Leave review here'
-        type="text"
-        id="comment"
-        onChange={handleChange}
-        value={createReview.comment}
-      ></input>
-      <button className="formSubmit-btn" type="submit">Send</button>
-    </form>
-    </div>
+      <div className="formBox">
+        <form onSubmit={handleSubmit}>
+          <h2>Add A Review!</h2>
+          <label htmlFor="name"> Name:</label>
+          <input
+            placeholder='Enter full name'
+            type="text"
+            id="name"
+            className='name'
+            onChange={handleChange}
+            value={createReview.name}
+          />
+          <label htmlFor="comment">Comment</label>
+          <input
+            placeholder='Leave review here'
+            type="text"
+            id="comment"
+            className='comment'
+            onChange={handleChange}
+            value={createReview.comment}
+          ></input>
+          <button className="formSubmit-btn" type="submit">Send</button>
+        </form>
+      </div>
     </div>
   )
 }

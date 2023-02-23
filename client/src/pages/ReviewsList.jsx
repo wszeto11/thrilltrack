@@ -29,19 +29,19 @@ const ReviewsList = () => {
             <div className="showReview">
                 <h2>{review.name}</h2>
                 <p>{review.comment}</p>
-                <button onClick={() => handleDelete(review._id)}>Delete</button>
+                <button className='deleteComment-btn' onClick={() => handleDelete(review._id)}>Delete</button>
             </div>
         )
     })
     return (
         <div className="showReviewButton">
             <div className="addReviewBtn">
-            <Link to={`/themepark/${id}/reviews/addreview`}>
-                <button>Add Review</button>
-            </Link>
+                <Link to={`/themepark/${id}/reviews/addreview`}>
+                    <button className='addReview-btn'>Add Review</button>
+                </Link>
             </div>
             <div className="reviewDisplay">
-            {showReview}
+                {showReview}
             </div>
         </div>
     )

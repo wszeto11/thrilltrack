@@ -13,7 +13,7 @@
 ***
 ### Click to use ThrillTrack: [ThrillTrack](Need Link)
 
-![Image](Need IMG)
+![Image](https://i.imgur.com/Dx3MFLJ.png)
 ### ThrillTrack has theme parks from all around the world:
 * Pick a theme park you would like to visit.
 * View its details which includes location, description and rating.

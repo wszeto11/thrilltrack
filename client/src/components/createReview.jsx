@@ -28,7 +28,7 @@ const CreateReview = () => {
     <div className="formBox">
     <form onSubmit={handleSubmit}>
       <h2>Add A Review!</h2>
-      <label htmlFor="name"> name:</label>
+      <label htmlFor="name"> Name:</label>
       <input
         placeholder='Enter full name'
         type="text"

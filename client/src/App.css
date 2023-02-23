@@ -123,7 +123,7 @@ header {
 .showReview {
   background-color: rgb(108, 205, 244);
   text-align: center;
-  height: 40vh;
+  height: 30vh;
   width: 30vh;
   border-radius: 20px;
   border: 3px dotted rgb(241, 175, 175);
@@ -142,8 +142,22 @@ header {
 }
 
 .showReviewButton {
+  display: flex;
+  flex-direction: wrap;
   text-align: center;
   margin-bottom: 20vh 20vw;
+}
+
+
+/* .addReviewBtn {
+  text-align: center;
+  align-items: center;
+  background-color: red;
+} */
+
+.reviewDisplay {
+  display: flex;
+  justify-content: center;
 }
 
 .addReview-btn {
@@ -181,24 +195,6 @@ button:hover {
   transform: scale(1.06);
 }
 
-form {
-  background-color: rgb(108, 205, 244);
-  text-align: center;
-  height: 30vh;
-  width: 30vh;
-  border-radius: 20px;
-  border: 3px dotted rgb(241, 175, 175);
-  padding: 10vh;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  width: 100vw;
-  height: 30vh;
-  margin-top: 10vh;
-}
-
 .formSubmit-btn {
   display: inline-block;
   text-align: center;
@@ -214,18 +210,23 @@ form {
   margin: 5px;
 }
 
-.form {
-  transform: scale(1.06);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-content: space-between;
-  width: 70vw;
-  height: 50vh;
-  margin: 13vh;
-  opacity: 0.9;
+form {
+  background-color: rgb(108, 205, 244);
+  text-align: center;
+  /* height: 30vh; */
+  /* width: 30vh; */
   border-radius: 20px;
+  border: 3px dotted rgb(241, 175, 175);
+  padding: 10vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+   /* width: 100vw;  */
+  height: 30vh;
+  margin-top: 10vh;
+} 
   transition: .20s;
 }
 
@@ -367,3 +368,4 @@ form {
   border: 1px solid rgb(241, 175, 175);
   border-radius: 5px;
 }
+

@@ -6,8 +6,10 @@ body {
 }
 
 .home {
+  margin: 2vh;
   text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
 }
@@ -15,12 +17,10 @@ body {
 .themeParks {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   align-content: center;
-  width: 70vw;
-  height: 60vh;
-  margin: 40vh 2vw;  
+  overflow-y: auto;
 }
 
 .parks {
@@ -30,8 +30,8 @@ body {
   border-radius: 20px;
   transition: .20s;
   padding: 2vh 2vw;
-  min-width: 20vw;
-  min-height: 20vh;
+  max-width: 200px;
+  max-height: 600px;
 }
 
 .themeTitle {
@@ -39,6 +39,8 @@ body {
   display: flex;
   justify-content: center;
   align-content: center;
+  color: rgb(7, 33, 117);
+  text-shadow: rgb(240, 240, 240) 1px 0 5px;
 }
 
 .parkLinks {
@@ -50,8 +52,8 @@ body {
 }
 
 .park-img {
-  width: 20vw;
-  height: 25vh;
+  max-width: 200px;
+  max-height: 300px;
   border-radius: 12px;
   object-fit: cover;
 }
@@ -133,15 +135,15 @@ header {
 
 .showReviewList {
   display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .showReviewButton {
   text-align: center;
-  margin-bottom: 20vh 20vw; 
+  margin-bottom: 20vh 20vw;
 }
 
 .addReview-btn {
@@ -154,8 +156,8 @@ align-items: center;
   border: 4px double #cccccc;
   border-radius: 10px;
   font-size: 20px;
-  cursor: pointer; 
-  margin: 5px; 
+  cursor: pointer;
+  margin: 5px;
 }
 
 .deleteComment-btn {
@@ -195,10 +197,10 @@ form {
   width: 100vw;
   height: 30vh;
   margin-top: 10vh;
-} 
+}
 
 .formSubmit-btn {
- display: inline-block;
+  display: inline-block;
   text-align: center;
   background-color: #fa6b04;
   padding: 2vh;
@@ -224,7 +226,7 @@ form {
   margin: 13vh;
   opacity: 0.9;
   border-radius: 20px;
-  transition: .20s; 
+  transition: .20s;
 }
 
 .form:hover {
@@ -237,15 +239,15 @@ form {
 
 .reviewContainer:hover {
   transform: scale(1.06);
-} 
+}
 
 .reviewContainer:hover~.reviewContainer {
   transform: translateY(30px);
-} 
+}
 
-.formBox{
-display: flex;
-justify-content: center;
+.formBox {
+  display: flex;
+  justify-content: center;
 }
 
 .details-container {
@@ -279,6 +281,8 @@ justify-content: center;
   border: 2px solid rgb(241, 175, 175);
   border-radius: 5px;
   transition: .20s;
+  max-width: 400px;
+  max-height: 200px;
 }
 
 .themeImage:hover {
@@ -304,15 +308,15 @@ justify-content: center;
 
 .link {
   text-decoration: none;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .linkContainer:hover {
-  transform: scale(1.2);
+  transform: scale(1.06);
 }
 
 .linkContainer:hover~.linkContainer {
-  transform: translateY(30px);
+  transform: translateY(2px);
 }
 
 .about {
@@ -320,7 +324,7 @@ justify-content: center;
   display: flex;
   justify-content: center;
   align-content: center;
-  margin: 27vh;
+  margin: 15vh;
 }
 
 .about-container {

@@ -18,7 +18,8 @@ const Home = () => {
 
   return (
     <div className="home">
-      <h1 className="themeTitle">Theme Parks</h1>
+
+      <h1 className="themeTitle">Theme Parks From All Around The World</h1>
       <div className="themeParks">
         {themeParks.map((themePark) => (
           <div className="parks" key={themePark.name}>

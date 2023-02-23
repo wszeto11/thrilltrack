@@ -7,19 +7,27 @@ const Details = () => {
     // console.log(park)
 
     return (
-        <div>
-            <h1 className='details'>Details</h1>
-            <h1>{park.name}</h1>
-            <img src={park.image} alt='theme park image' />
-            <p>Location: {park.location}</p>
-            <p>Description: {park.description}</p>
-            <p>Rating: {park.rating}</p>
-            <Link to={`/themepark/${park._id}/reviews`} state={{ park }}>
-                <h1>
-                    Click here for reviews!
-                </h1>
-            </Link>
+        <div className='details-container'>
+            <div className='details-contain'>
+                <div className='contain'>
+                    <h1 className='details'>{park.name}</h1>
+                    <img src={park.image} alt='theme park image' className='themeImage' />
+                    <div className='detailsInfo'>
 
+                        <p className='location'>Location: {park.location}</p>
+                        <p className='description'>Description: {park.description}</p>
+                        <p className='rating'>Rating: {park.rating}</p>
+                    </div>
+                    <div className='linkContainer'>
+
+                        <Link to={`/themepark/${park._id}/reviews`} state={{ park }} className='link'>
+                            <h1 className='reviewLink'>
+                                Click here for reviews!
+                            </h1>
+                        </Link>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

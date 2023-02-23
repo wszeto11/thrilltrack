@@ -36,7 +36,7 @@
 
 ## ***Materials Used***
 ***
-* Link to Trello: [TrillTrackTrello](https://trello.com/b/i7OiLFPn/trilltrack)
+* Link to Trello: [ThrillTrackTrello](https://trello.com/b/i7OiLFPn/thrilltrack)
 * Link to ERD and Hierarchy Map: [ThrillTrackERDHierarchy](https://lucid.app/lucidchart/e11d1c75-7e22-4a64-a96a-87c137f19482/edit?page=0_0#)
 
 ## ***Future Features***

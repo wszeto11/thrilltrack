@@ -12,6 +12,7 @@
 body {
   background: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F607%2F620%2Foriginal%2Flarge-amusement-park-scene-vector.jpg&f=1&nofb=1&ipt=2665aeef6a75debb925cc38d689703e1c38f97eb83ca23316edb2f8046bd489d&ipo=images');
   background-size: cover;
+  background-repeat: no-repeat;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -61,7 +62,6 @@ header nav a {
 } */
 
 .details-container {
-  /* background-color: green; */
   text-align: center;
   display: flex;
   justify-content: center;
@@ -69,10 +69,13 @@ header nav a {
 }
 
 .details-contain {
-  margin: 13vh;
+  padding: 2vh 2vw;
+  margin: 10vh;
   background-color: rgba(108, 205, 244, 0.9);
-  /* opacity: 0.9; */
   border: 2px solid rgb(241, 175, 175);
+  overflow-y: auto;
+  max-width: 60vw;
+  max-height: 80vh;
   border-radius: 20px;
   transition: .20s;
 }
@@ -89,8 +92,6 @@ header nav a {
   border: 2px solid rgb(241, 175, 175);
   border-radius: 5px;
   transition: .20s;
-  /* opacity: 1; */
-  /* z-index: 1; */
 }
 
 .themeImage:hover {
@@ -125,4 +126,39 @@ header nav a {
 
 .linkContainer:hover~.linkContainer {
   transform: translateY(30px);
+}
+
+.about {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 27vh;
+}
+
+.about-container {
+  padding: 2vh 2vw;
+  max-width: 30vw;
+  max-height: 50vh;
+  overflow-y: auto;
+  background-color: rgba(108, 205, 244, 0.9);
+  border: 2px solid rgb(241, 175, 175);
+  border-radius: 20px;
+  transition: .20s;
+}
+
+.about-container:hover {
+  transform: scale(1.06);
+}
+
+.about-container:hover~.about-container {
+  transform: translateY(30px);
+}
+
+.quote {
+  font-style: italic;
+}
+
+.about-description {
+  font-weight: 600;
 }

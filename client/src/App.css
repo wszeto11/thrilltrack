@@ -66,28 +66,75 @@ body {
   height: 25vh;
   border-radius: 12px;
   object-fit: cover;
-} 
+}
 
 header {
   background-color: #141265;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 3em;
+  height: 7vh;
 
 }
 
-header nav a {
-  margin: 0 1em;
+.logoTitle {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 200vw;
+  max-height: 20vh;
+}
+
+.trillTrack {
+  margin: 0 1vw;
   color: beige;
 }
 
-
-
-
-.App {
-  text-align: center;
+.homeAbout {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 200vw;
+  max-height: 20vh;
+  font-size: 20px;
 }
+
+.homeAbout a {
+  padding: 1vh 1vw;
+  color: beige;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.logoImage:hover {
+  transform: scale(1.06);
+}
+
+.logoImage:hover~.logoImage {
+  transform: translateY(10px);
+}
+
+.homeNav:hover {
+  transform: scale(1.10);
+}
+
+.homeNav:hover~.homeNav {
+  transform: translateY(10px);
+}
+
+.aboutNav:hover {
+  transform: scale(1.10);
+}
+
+.aboutNav:hover~.aboutNav {
+  transform: translateY(10px);
+}
+
+
+/* .App {
+  text-align: center;
+} */
 
 
 /* .App-header {
@@ -215,4 +262,18 @@ header nav a {
 
 .about-description {
   font-weight: 600;
+}
+
+.logoHomeAbout {
+  display: flex;
+  padding: 1vh 1vw;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoImage {
+  width: 4vw;
+  height: 5vh;
+  border: 1px solid rgb(241, 175, 175);
+  border-radius: 5px;
 }

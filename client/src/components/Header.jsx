@@ -6,9 +6,22 @@ const Header = () => {
 
     <header>
       <nav>
-        <div>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/about">About</NavLink>
+        <div className='logoHomeAbout'>
+          <div className='logoTitle'>
+
+            <NavLink to="/" className='logo'>
+              <img src='https://i.imgur.com/cLo3FJS.png' alt='theme park image' className='logoImage' />
+            </NavLink>
+            <h1 className='trillTrack'>TrillTrack</h1>
+          </div>
+          <div className='homeAbout'>
+            <div className='homeNav'>
+              <NavLink to="/" className='homeLink'>Home</NavLink>
+            </div>
+            <div className='aboutNav'>
+              <NavLink to="/about" className='aboutLink'>About</NavLink>
+            </div>
+          </div>
         </div>
 
       </nav>

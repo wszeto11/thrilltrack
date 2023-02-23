@@ -1,6 +1,9 @@
 {
   "name": "thrilltrack",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.x"
+  },
   "description": "a MERN stack theme park review site",
   "main": "index.js",
   "scripts": {

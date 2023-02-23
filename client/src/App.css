@@ -9,6 +9,58 @@ form {
   margin-top: 10vh;
 }
 
+
+body {
+  background: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F607%2F620%2Foriginal%2Flarge-amusement-park-scene-vector.jpg&f=1&nofb=1&ipt=2665aeef6a75debb925cc38d689703e1c38f97eb83ca23316edb2f8046bd489d&ipo=images');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Poppins', sans-serif;
+}
+
+.themeParks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  width: 70vw;
+  height: 60vh;
+  margin: 40vh 2vw;
+}
+
+.parks {
+  margin: 2vh 2vw;
+  background-color: rgba(108, 205, 244, 0.9);
+  /* opacity: 0.9; */
+  border: 2px solid rgb(241, 175, 175);
+  border-radius: 20px;
+  transition: .20s;
+  padding: 2vh 2vw;
+  min-width: 20vw;
+  min-height: 20vh;
+}
+
+.themeTitle {
+  text-align: center;
+}
+
+.parkLinks {
+  text-decoration: none;
+}
+
+.parkName {
+  text-align: center;
+}
+
+.park-img {
+  /* display: flex;
+  flex-wrap: wrap;  */
+  width: 20vw;
+  height: 25vh;
+  border-radius: 12px;
+  object-fit: cover;
+} 
+
 header {
   background-color: #141265;
   display: flex;
@@ -22,6 +74,8 @@ header nav a{
   margin: 0 1em;
   color: beige;
 }
+
+
 
 
 .App {
